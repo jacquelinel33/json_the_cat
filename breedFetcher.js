@@ -1,8 +1,5 @@
 const request = require('request');
-// const process = require('process');
 
-
-//gets input breed name, take the first 4 characters and create the url
 const breedName = process.argv[2];
 const url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 
@@ -18,7 +15,7 @@ request(url, (error, response, body) => {
     console.log(breed.description);
   } else {
     console.log(`This ${breedName} does not exist.`);
-  };
+  }
 });
 
 
